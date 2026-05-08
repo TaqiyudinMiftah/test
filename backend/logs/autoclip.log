@@ -1,0 +1,1104 @@
+[2026-05-07 05:11:02] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:11:02] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:11:02] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:11:02] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:11:02] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:11:02] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:11:04] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.04038s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.05388s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.06184s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.06735s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.1073s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.06090s] ('userrole', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.06825s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.07423s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.09947s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:11:04] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:11:04] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:11:48] [INFO] [main] [main.py:27] Application shutting down...
+[2026-05-07 05:11:51] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:11:51] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:11:51] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:11:51] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:11:51] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:11:51] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:11:52] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00283s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02812s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03345s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.04083s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.04601s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00206s] ('userrole', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01163s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01857s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02678s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:11:52] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:11:52] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:12:00] [INFO] [main] [main.py:27] Application shutting down...
+[2026-05-07 05:12:03] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:12:03] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:12:03] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:12:03] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:12:04] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:12:04] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:12:06] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00205s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01758s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02765s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03738s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.04652s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00340s] ('userrole', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01376s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02499s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03358s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:12:06] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:53] [1bdd97dc] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00196s] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:53] [b44e2131] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.08308s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:2702] ROLLBACK
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00207s] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:12:06] [ERROR] [api.access] [main.py:76] [b44e2131] ERROR: GET /api/v1/auth/me - Time: 0.237s - Exception: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/main.py", line 59, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+
+[2026-05-07 05:12:06] [ERROR] [main] [main.py:101] Unhandled exception in GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+  + Exception Group Traceback (most recent call last):
+  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+  |     yield
+  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+    |     with collapse_excgroups():
+    |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    |     raise exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/app/app/main.py", line 59, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    |     raise app_exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    |     response = await func(request)
+    |                ^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 1 validation errors:
+    |   {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/main.py", line 59, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:63] [1bdd97dc] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.649s
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:53] [c6886e4a] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:12:06] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.6763s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:12:07] [INFO] [sqlalchemy.engine.Engine] [base.py:2702] ROLLBACK
+[2026-05-07 05:12:07] [ERROR] [api.access] [main.py:76] [c6886e4a] ERROR: GET /api/v1/auth/me - Time: 0.049s - Exception: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/main.py", line 59, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+
+[2026-05-07 05:12:07] [ERROR] [main] [main.py:101] Unhandled exception in GET /api/v1/auth/me: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+  + Exception Group Traceback (most recent call last):
+  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+  |     yield
+  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+    |     with collapse_excgroups():
+    |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    |     raise exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/app/app/main.py", line 59, in logging_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    |     raise app_exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    |     await route.handle(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    |     await self.app(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    |     response = await func(request)
+    |                ^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    |     content = await serialize_response(
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    |     raise ResponseValidationError(
+    | fastapi.exceptions.ResponseValidationError: 1 validation errors:
+    |   {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+    | 
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/app/main.py", line 59, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+
+[2026-05-07 05:12:07] [INFO] [api.access] [main.py:53] [41c7b7a4] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:07] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:12:07] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:12:07] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.8062s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:12:07] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:12:07] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.596s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:12:07] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:12:07] [INFO] [api.access] [main.py:63] [41c7b7a4] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.069s
+[2026-05-07 05:12:40] [INFO] [main] [main.py:27] Application shutting down...
+[2026-05-07 05:12:44] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:12:44] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:12:44] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:12:44] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:12:44] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:12:44] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:12:46] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00192s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01814s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02622s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03597s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.04363s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00253s] ('userrole', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01107s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01752s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02375s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:12:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:12:46] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:13:09] [INFO] [main] [main.py:27] Application shutting down...
+[2026-05-07 05:13:11] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:13:11] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:13:11] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:13:11] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:13:11] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:13:11] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:13:12] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00241s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01554s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02268s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03057s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.04741s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00204s] ('userrole', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01601s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03088s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.1107s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:13:12] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:13:12] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:13:41] [INFO] [main] [main.py:27] Application shutting down...
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:13:58] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:14:03] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.01005s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.3973s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.4709s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.4973s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:04] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.5145s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00532s] ('userrole', 'pg_catalog')
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03888s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.0572s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.07628s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:14:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:14:05] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:14:26] [INFO] [api.access] [main.py:53] [2e0b3a45] REQUEST: GET /api/v1/health - Client: 172.19.0.1 - User-Agent: Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8115
+[2026-05-07 05:14:26] [INFO] [api.access] [main.py:63] [2e0b3a45] RESPONSE: GET /api/v1/health - Status: 200 - Time: 0.043s
+[2026-05-07 05:14:52] [INFO] [main] [main.py:27] Application shutting down...
+[2026-05-07 05:14:56] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:14:56] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:14:56] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:14:56] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:14:56] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:14:56] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:14:57] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00191s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02121s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02876s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.03437s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.04069s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00192s] ('userrole', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01056s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.01819s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.0241s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:14:57] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:14:57] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:28:03] [INFO] [main] [main.py:27] Application shutting down...
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:106] ============================================================
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:107] AutoClip AI Backend Starting...
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:108] Environment: development
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:109] Log Level: INFO
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:110] Log Directory: /app/logs
+[2026-05-07 05:29:06] [INFO] [root] [logger.py:111] ============================================================
+[2026-05-07 05:29:09] [INFO] [main] [main.py:19] Initializing database...
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select pg_catalog.version()
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] select current_schema()
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] show standard_conforming_strings
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [raw sql] ()
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00840s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.09505s ago] ('video_jobs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.1129s ago] ('segments', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.1259s ago] ('clips', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.1432s ago] ('feedback_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00396s] ('userrole', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.02968s ago] ('jobstatus', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.04624s ago] ('clipdecision', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT pg_catalog.pg_type.typname 
+FROM pg_catalog.pg_type JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_type.typnamespace 
+WHERE pg_catalog.pg_type.typname = $1::VARCHAR AND pg_catalog.pg_type_is_visible(pg_catalog.pg_type.oid) AND pg_catalog.pg_namespace.nspname != $2::VARCHAR
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.05747s ago] ('feedbackaction', 'pg_catalog')
+[2026-05-07 05:29:09] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:29:09] [INFO] [main] [main.py:22] Database initialized successfully
+[2026-05-07 05:31:26] [INFO] [api.access] [main.py:53] [26e1bdaa] REQUEST: POST /api/v1/auth/login - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:27] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:31:27] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.email = $1::VARCHAR
+[2026-05-07 05:31:27] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00697s] ('admin@autoclip.ai',)
+[2026-05-07 05:31:28] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:31:28] [INFO] [api.access] [main.py:63] [26e1bdaa] RESPONSE: POST /api/v1/auth/login - Status: 200 - Time: 1.462s
+[2026-05-07 05:31:28] [INFO] [api.access] [main.py:53] [256ca129] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:28] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:31:28] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:31:28] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00495s] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:31:28] [INFO] [api.access] [main.py:53] [e15e1515] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [256ca129] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.328s
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:53] [96de2e21] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.3917s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.4021s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [96de2e21] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.041s
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00256s] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [e15e1515] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.551s
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:53] [23a7ca58] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.6694s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 0.1795s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:31:29] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [23a7ca58] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.077s
+[2026-05-07 05:33:04] [INFO] [api.access] [main.py:53] [50a09998] REQUEST: POST /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:33:07] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:33:07] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:33:07] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 98.99s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:33:07] [INFO] [api.jobs] [jobs.py:36] Upload request dari user admin@autoclip.ai: timothy.mp4 (.mp4)
+[2026-05-07 05:33:08] [INFO] [api.jobs] [jobs.py:54] File disimpan: timothy.mp4 (51521937 bytes)
+[2026-05-07 05:33:08] [INFO] [api.jobs] [jobs.py:64] Uploading ke MinIO: raw/e6f53ba4-b0fe-48b5-9fc8-e9efed9ca022.mp4
+[2026-05-07 05:33:11] [INFO] [api.jobs] [jobs.py:66] Upload ke MinIO berhasil: autoclip/raw/e6f53ba4-b0fe-48b5-9fc8-e9efed9ca022.mp4
+[2026-05-07 05:33:11] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] INSERT INTO video_jobs (id, user_id, status, original_filename, s3_input_path, metadata_json, s3_output_prefix, error_message) VALUES ($1::UUID, $2::UUID, $3::jobstatus, $4::VARCHAR, $5::VARCHAR, $6::JSONB, $7::VARCHAR, $8::VARCHAR) RETURNING video_jobs.created_at, video_jobs.updated_at
+[2026-05-07 05:33:11] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.01238s] (UUID('e6f53ba4-b0fe-48b5-9fc8-e9efed9ca022'), UUID('d8ebba0e-1604-48a4-8298-050461576636'), 'PENDING', 'timothy.mp4', 'autoclip/raw/e6f53ba4-b0fe-48b5-9fc8-e9efed9ca022.mp4', '{}', None, None)
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.id = $1::UUID
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [generated in 0.00310s] (UUID('e6f53ba4-b0fe-48b5-9fc8-e9efed9ca022'),)
+[2026-05-07 05:33:12] [INFO] [api.jobs] [jobs.py:79] Job dibuat: e6f53ba4-b0fe-48b5-9fc8-e9efed9ca022 oleh user admin@autoclip.ai
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:33:12] [INFO] [api.access] [main.py:63] [50a09998] RESPONSE: POST /api/v1/jobs - Status: 201 - Time: 8.258s
+[2026-05-07 05:33:12] [INFO] [api.access] [main.py:53] [6229d95f] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 104.3s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 103.9s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:33:12] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:33:12] [INFO] [api.access] [main.py:63] [6229d95f] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.197s
+[2026-05-07 05:50:40] [INFO] [api.access] [main.py:53] [adbebe3b] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:40] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:50:40] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:50:40] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1158s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:50:40] [INFO] [api.access] [main.py:53] [db4e4244] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:40] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:50:40] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:50:40] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1159s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1159s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [adbebe3b] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 1.358s
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [db4e4244] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.961s
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:53] [413151c1] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1160s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [413151c1] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.054s
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:53] [5cdcd809] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1160s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1159s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:50:41] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [5cdcd809] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.125s
+[2026-05-07 05:55:45] [INFO] [api.access] [main.py:53] [ad68414c] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:45] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:55:45] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:55:45] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1465s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:55:45] [INFO] [api.access] [main.py:53] [c44ad11b] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:45] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:55:45] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:55:45] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1465s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:55:45] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1465s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [c44ad11b] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.221s
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [ad68414c] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.501s
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:53] [079e0485] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1466s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:53] [4abb3489] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1466s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 1466s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 05:55:46] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [079e0485] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.100s
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [4abb3489] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.083s
+[2026-05-07 06:24:25] [INFO] [api.access] [main.py:53] [ab8deb9b] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:25] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:24:25] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:24:25] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 3196s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:24:25] [INFO] [api.access] [main.py:53] [e413da9c] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:25] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:24:25] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:24:25] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 3196s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 3196s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [e413da9c] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.267s
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [ab8deb9b] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.748s
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:53] [56ef65ce] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 3196s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [56ef65ce] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.058s
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:53] [26986464] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 3197s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 3196s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 06:24:26] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [26986464] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.048s
+[2026-05-07 06:42:33] [INFO] [api.access] [main.py:53] [79195c2c] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:33] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:42:33] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:42:33] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 4291s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:53] [e3fb5d69] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 4291s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 4291s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [79195c2c] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.588s
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [e3fb5d69] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.248s
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:53] [fe2183b1] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 4291s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [fe2183b1] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.044s
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:53] [cc6c7942] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 4291s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 4291s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 06:42:34] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [cc6c7942] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.048s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [910f4a0a] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 7222s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [ebeeb7d4] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 7222s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 7221s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [910f4a0a] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.555s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [ebeeb7d4] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.216s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [eaff9101] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 7222s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [eaff9101] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.058s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [26f5ff30] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2699] BEGIN (implicit)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT users.id, users.email, users.hashed_password, users.full_name, users.role, users.is_active, users.created_at 
+FROM users 
+WHERE users.id = $1::UUID
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 7222s ago] ('d8ebba0e-1604-48a4-8298-050461576636',)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] SELECT video_jobs.id, video_jobs.user_id, video_jobs.status, video_jobs.original_filename, video_jobs.s3_input_path, video_jobs.metadata_json, video_jobs.s3_output_prefix, video_jobs.error_message, video_jobs.created_at, video_jobs.updated_at 
+FROM video_jobs 
+WHERE video_jobs.user_id = $1::UUID ORDER BY video_jobs.created_at DESC 
+ LIMIT $2::INTEGER OFFSET $3::INTEGER
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:1846] [cached since 7222s ago] (UUID('d8ebba0e-1604-48a4-8298-050461576636'), 20, 0)
+[2026-05-07 07:31:05] [INFO] [sqlalchemy.engine.Engine] [base.py:2705] COMMIT
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [26f5ff30] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.064s
+[2026-05-07 07:33:01] [INFO] [main] [main.py:27] Application shutting down...

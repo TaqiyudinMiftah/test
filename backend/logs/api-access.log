@@ -1,0 +1,164 @@
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:53] [1bdd97dc] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:53] [b44e2131] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:06] [ERROR] [api.access] [main.py:76] [b44e2131] ERROR: GET /api/v1/auth/me - Time: 0.237s - Exception: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/main.py", line 59, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:63] [1bdd97dc] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.649s
+[2026-05-07 05:12:06] [INFO] [api.access] [main.py:53] [c6886e4a] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:07] [ERROR] [api.access] [main.py:76] [c6886e4a] ERROR: GET /api/v1/auth/me - Time: 0.049s - Exception: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/app/main.py", line 59, in logging_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 155, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'string_type', 'loc': ('response', 'created_at'), 'msg': 'Input should be a valid string', 'input': datetime.datetime(2026, 5, 7, 4, 21, 12, 165281, tzinfo=datetime.timezone.utc)}
+
+[2026-05-07 05:12:07] [INFO] [api.access] [main.py:53] [41c7b7a4] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:12:07] [INFO] [api.access] [main.py:63] [41c7b7a4] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.069s
+[2026-05-07 05:14:26] [INFO] [api.access] [main.py:53] [2e0b3a45] REQUEST: GET /api/v1/health - Client: 172.19.0.1 - User-Agent: Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8115
+[2026-05-07 05:14:26] [INFO] [api.access] [main.py:63] [2e0b3a45] RESPONSE: GET /api/v1/health - Status: 200 - Time: 0.043s
+[2026-05-07 05:31:26] [INFO] [api.access] [main.py:53] [26e1bdaa] REQUEST: POST /api/v1/auth/login - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:28] [INFO] [api.access] [main.py:63] [26e1bdaa] RESPONSE: POST /api/v1/auth/login - Status: 200 - Time: 1.462s
+[2026-05-07 05:31:28] [INFO] [api.access] [main.py:53] [256ca129] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:28] [INFO] [api.access] [main.py:53] [e15e1515] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [256ca129] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.328s
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:53] [96de2e21] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [96de2e21] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.041s
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [e15e1515] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.551s
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:53] [23a7ca58] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:31:29] [INFO] [api.access] [main.py:63] [23a7ca58] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.077s
+[2026-05-07 05:33:04] [INFO] [api.access] [main.py:53] [50a09998] REQUEST: POST /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:33:12] [INFO] [api.access] [main.py:63] [50a09998] RESPONSE: POST /api/v1/jobs - Status: 201 - Time: 8.258s
+[2026-05-07 05:33:12] [INFO] [api.access] [main.py:53] [6229d95f] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:33:12] [INFO] [api.access] [main.py:63] [6229d95f] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.197s
+[2026-05-07 05:50:40] [INFO] [api.access] [main.py:53] [adbebe3b] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:40] [INFO] [api.access] [main.py:53] [db4e4244] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [adbebe3b] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 1.358s
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [db4e4244] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.961s
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:53] [413151c1] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [413151c1] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.054s
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:53] [5cdcd809] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:50:41] [INFO] [api.access] [main.py:63] [5cdcd809] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.125s
+[2026-05-07 05:55:45] [INFO] [api.access] [main.py:53] [ad68414c] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:45] [INFO] [api.access] [main.py:53] [c44ad11b] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [c44ad11b] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.221s
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [ad68414c] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.501s
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:53] [079e0485] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:53] [4abb3489] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [079e0485] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.100s
+[2026-05-07 05:55:46] [INFO] [api.access] [main.py:63] [4abb3489] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.083s
+[2026-05-07 06:24:25] [INFO] [api.access] [main.py:53] [ab8deb9b] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:25] [INFO] [api.access] [main.py:53] [e413da9c] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [e413da9c] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.267s
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [ab8deb9b] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.748s
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:53] [56ef65ce] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [56ef65ce] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.058s
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:53] [26986464] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:24:26] [INFO] [api.access] [main.py:63] [26986464] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.048s
+[2026-05-07 06:42:33] [INFO] [api.access] [main.py:53] [79195c2c] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:53] [e3fb5d69] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [79195c2c] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.588s
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [e3fb5d69] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.248s
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:53] [fe2183b1] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [fe2183b1] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.044s
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:53] [cc6c7942] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 06:42:34] [INFO] [api.access] [main.py:63] [cc6c7942] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.048s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [910f4a0a] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [ebeeb7d4] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [910f4a0a] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.555s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [ebeeb7d4] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.216s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [eaff9101] REQUEST: GET /api/v1/auth/me - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [eaff9101] RESPONSE: GET /api/v1/auth/me - Status: 200 - Time: 0.058s
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:53] [26f5ff30] REQUEST: GET /api/v1/jobs - Client: 172.19.0.7 - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36
+[2026-05-07 07:31:05] [INFO] [api.access] [main.py:63] [26f5ff30] RESPONSE: GET /api/v1/jobs - Status: 200 - Time: 0.064s
